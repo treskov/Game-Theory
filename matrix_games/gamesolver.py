@@ -106,7 +106,8 @@ def solve(matrix):
         print('The game value is ', end=' ')
         print(saddlepoint(matrix)[1])
         print('The optimal strategies for the row and column player are')
-        df = pd.DataFrame([[np.around(simplex(matrix)[0], decimals=4), np.around(simplex(-matrix.T)[0], decimals=4)]],columns=['Row Player', 'Column Player'])
+        df = pd.DataFrame([[np.around(simplex(matrix)[0], decimals=4), np.around(simplex(-matrix.T)[0], decimals=4)]],
+                          columns=['Row Player', 'Column Player'])
         df.index = ['']
         print(df)
 
@@ -115,7 +116,8 @@ def solve(matrix):
         print('The game value is ', end=' ')
         print(round(simplex(matrix)[1], 4))
         print('The optimal strategies for the row and column player are')
-        df = pd.DataFrame([[np.around(simplex(matrix)[0], decimals=4), np.around(simplex(-matrix.T)[0], decimals=4)]],columns=['Row Player', 'Column Player'])
+        df = pd.DataFrame([[np.around(simplex(matrix)[0], decimals=4), np.around(simplex(-matrix.T)[0], decimals=4)]],
+                          columns=['Row Player', 'Column Player'])
         df.index = ['']
         print(df)
 
